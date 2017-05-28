@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//CRAZYIT//DTD BEAN//EN"
+  "http://www.panjian.org/beans.dtd">
+
+<beans>
+
+	<bean id="test1" class="Test.B" lazy-init="true">
+		<constructor-arg>
+			<value type="java.lang.Integer">11</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value type="java.lang.String">pan</value>
+		</constructor-arg>
+		<constructor-arg>
+			<ref bean="test2"></ref>
+		</constructor-arg>
+	</bean>
+
+	<bean id="aa" class="Test.A">
+		<property name="school">
+			<value type="java.lang.String">panjian</value>
+		</property>
+	</bean>
+
+	<bean id="test3" class="Test.B" autowire="byName">
+	</bean>
+
+</beans>
