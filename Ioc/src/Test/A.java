@@ -25,4 +25,7 @@ public class A {
 		return "A [school=" + school + "]";
 	}
 
+	public void test(){
+		System.out.println("测试 github");
+	}
 }
